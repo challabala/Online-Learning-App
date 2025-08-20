@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Categories</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f1f5ff;
+      color: #1e1e2f;
+    }
+
+    section {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #1d1c3b;
+    }
+
+    h2 span {
+      color: #f55d5d; 
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+      max-width: 650px;
+      margin: 0 auto 50px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      justify-content: flex-start;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+
+    .card i {
+      font-size: 30px;
+      color: #3454f5; 
+    }
+
+    .card span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1e1e2f;
+    }
+
+    .highlight {
+      background: #ffd95c;
+      justify-content: center;
+    }
+    .highlight:hover{
+        background-color: white;
+    }
+    
+  </style>
+</head>
+<body>
+  <section>
+    <h2>Explore diverse learning paths within <br> our course <span>categories</span></h2>
+    <p>Our carefully curated course categories are designed to help you explore different fields, gain new skills, and advance your knowledge.</p>
+
+    <div class="categories">
+      <div class="card"><i class='bx bx-desktop'></i><span>Computer science</span></div>
+      <div class="card"><i class='bx bx-code-alt'></i><span>Programming languages</span></div>
+      <div class="card"><i class='bx bx-cube-alt'></i><span>Software development</span></div>
+      <div class="card"><i class='bx bx-globe'></i><span>Web development</span></div>
+      <div class="card"><i class='bx bx-line-chart'></i><span>Data science & analytics</span></div>
+      <div class="card"><i class='bx bx-mobile-alt'></i><span>Mobile app development</span></div>
+      <div class="card"><i class='bx bx-server'></i><span>Database management</span></div>
+      <div class="card highlight"><span>Explore all categories</span></div>
+    </div>
+  </section>
+</body>
+</html>
