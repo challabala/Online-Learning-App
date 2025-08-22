@@ -181,3 +181,200 @@ body {
     .highlight:hover{
         background-color: white;
     }
+
+    /* footer page added*/
+    
+    .footer-serch{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+    }
+    footer{
+      background-color:#f5f5f5;
+      padding: 40px 80px;
+      color: #2d2a55;
+    }
+    .footer-logo{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #0a0a73;
+    }
+    .footer-logo-icon{
+      width: 40px;
+      height: 40px;
+      background: #f26c18;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .footer-logo-text{
+      font-size: 40px;
+      font-weight: 800;
+      color:#0a0a73;
+    }
+    
+    .subscribe-container{
+      text-align: right;
+    }
+    .subscribe-container h2{
+      margin: 0 0 5px;
+      font-size: 25px;
+      color: #2c2c6c;
+      font-weight: 500;
+      position: relative;
+      top: 50px;
+    }
+    .subscribe-box{
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border-radius: 50px;
+        overflow: hidden;
+        padding: 3px;
+        width: 644px;
+        height: 74px;
+        position: relative;
+        top: 70px;
+    }
+
+    .subscribe-box input{
+        border: none;
+        padding: 10px 15px;
+        outline: none;
+        flex: 1;
+        font-size: 14px;
+        border-radius: 50px 0 0 50px;
+        
+    }
+
+    .subscribe-box button {
+      background: #ffd966;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 126px;
+      height: 62px;
+    }
+
+    .subscribe-box button:hover {
+      background: #ffcc33;
+    }
+    
+    h2{
+      color: #2c2c6c;
+      margin-bottom: 15px;
+    }
+    
+    .menu-container {
+      display: flex;
+      gap: 80px;
+      position: relative;
+      top: 100px;
+      left: 50px; 
+    }
+
+    .menu-section h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      gap: 10px 40px; 
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu li {
+      margin-bottom: 8px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #2c2c6c;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #ff6b6b;
+    }
+
+    .menu a.active {
+      color: #ff6b6b; 
+      font-weight: bold;
+    }
+    .footer-column{
+      min-width: 200px;
+      margin: 20px 0;
+    }
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: #f5f5f5;
+      padding: 20px 40px;
+    }
+
+    .contact-info h3 {
+      color: #2c2c6c;
+      margin-bottom: 15px;
+    }
+    .social-links h3 {
+        color: #2c2c6c;
+        margin-bottom: 15px;
+        margin-left: 100px;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      color: #2c2c6c;
+      font-size: 16px;
+    }
+
+    .contact-info i {
+      color: #2962ff;
+      font-size: 18px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      position: relative;
+      left: 100px;
+    }
+
+    .social-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      color: #2962ff;
+      font-size: 18px;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .social-icons a:hover {
+      background: #2962ff;
+      color: white;
+    }
+        
