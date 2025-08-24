@@ -1,86 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogicWhile</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogicWhile</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav-container">
-            <a href="#" class="logo">
-                <div class="logo-icon"><i class="fa-solid fa-book"></i></div>
-                <h2 class="logo-text"><span style="color:#f26c18">Logic</span> While</h2>
-            </a>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-book"></i></div>
+        <h2 class="logo-text"><span style="color:#f26c18">Logic</span> While</h2>
+      </a>
+      <div class="menu-icon" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#" class="nav-link">Home</a></li>
+        <li><a href="#" class="nav-link">Courses</a></li>
+        <li><a href="#" class="nav-link">Premium</a></li>
+        <li><a href="#" class="nav-link">Pages</a></li>
+        <li><a href="#" class="cart">Cart</a></li>
+        <li><a href="./Pages/SignUp.html" class="signup-btn">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Premium</a>
-                    
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Pages</a>
-                </li>
-            </ul>
-
-            <div class="nav-btns">
-                <a href="#" class="cart">Cart</a>
-                <a href="./Pages/SignUp.html" class="signup-btn">Sign Up</a>
-            </div>
-
-        </nav>
-    </header>
-    
-<section class="banner">
-    <div class="banner-div">
-        <div class="heading">
-            <h1>Lighting the</h1>
-            <h1>path to <span style="color:#f26c18">future</span> success</h1>
-        </div>
-        <p class="banner-para">
-            Where students are encouraged to reach their full potential through rigorous coursework, innovative research, and a supportive learning environment.
-        </p>
-        <div class="banner-btn">
-            <button class="btn1 btn">Start learn today</button>
-            <button class="btn2 btn">Explore Program</button>
-        </div>
-        <div class="banner-media">
-           <div class="banner-stat">
-             <img src="https://cdn.prod.website-files.com/66d2b0d6f9dd1bce468522a2/66d584e27f342ce4458046aa_about-image-01.avif" alt="Statistics" />
-           </div>
-           <div class="banner-video">
-             <video autoplay muted loop>
-               <source src="https://cdn.prod.website-files.com/66d2b0d6f9dd1bce468522a2%2F66d2de6766d875ac32d21018_hero-video-01-transcode.mp4" type="video/mp4" />
-               Your browser does not support the video tag.
-             </video>
-           </div>
-           <div class="banner-img">
-             <img src="https://cdn.prod.website-files.com/66d2b0d6f9dd1bce468522a2/66e543901763e997592475ae_hero-image-01.avif" alt="Banner Image" />
-           </div>
-        </div>
+  <!-- Banner -->
+  <section class="banner">
+    <div class="heading">
+      <h1>Lighting the</h1>
+      <h1>path to <span style="color:#f26c18">future</span> success</h1>
     </div>
-</section>
-<!-- categorie page -->
- <section>
+    <p class="banner-para">Where students are encouraged to reach their full potential through rigorous coursework, innovative research, and a supportive learning environment.</p>
+    <div class="banner-btn">
+      <button class="btn">Start learn today</button>
+      <button class="btn btn2">Explore Program</button>
+    </div>
+    <div class="banner-media">
+      <img src="https://cdn.prod.website-files.com/66d2b0d6f9dd1bce468522a2/66d584e27f342ce4458046aa_about-image-01.avif" alt="">
+      <video autoplay muted loop>
+        <source src="https://cdn.prod.website-files.com/66d2b0d6f9dd1bce468522a2%2F66d2de6766d875ac32d21018_hero-video-01-transcode.mp4" type="video/mp4">
+      </video>
+      <img src="https://cdn.prod.website-files.com/66d2b0d6f9dd1bce468522a2/66e543901763e997592475ae_hero-image-01.avif" alt="">
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="category">
     <h2>Explore diverse learning paths within <br> our course <span>categories</span></h2>
     <p>Our carefully curated course categories are designed to help you explore different fields, gain new skills, and advance your knowledge.</p>
-
     <div class="categories">
       <div class="card"><i class='bx bx-desktop'></i><span>Computer science</span></div>
       <div class="card"><i class='bx bx-code-alt'></i><span>Programming languages</span></div>
@@ -93,71 +65,28 @@
     </div>
   </section>
 
-  <!-- footer page added -->
-   <footer>
-         <div class="footer-serch">
-                <a href="#" class="footer-logo">
-                    <div class="footer-logo-icon"><i class="fa-solid fa-book"></i></div>
-                    <h2 class="footer-logo-text"><span style="color:#f26c18">Logic</span> While</h2>
-                </a>
-                <div class="subscribe-container">
-                    <h2>Get the latest information on events and educational news</h2>
-                    <div class="subscribe-box">
-                        <input type="email" placeholder="Enter email adders">
-                        <button>Subscribe</button>
-                    </div>
-                </div>
-           </div>
-            <div class="menu-container">
-                <div class="menu-section">
-                    <h2>Pages</h2>
-                    <ul class="menu">
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="#">Tutors</a></li>
-                        <li><a href="#">Home 2</a></li>
-                        <li><a href="#">Events</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Courses Categories</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
+  <!-- Footer -->
+  <footer>
+    <a href="#" class="footer-logo">
+      <div class="logo-icon"><i class="fa-solid fa-book"></i></div>
+      <h2 class="logo-text"><span style="color:#f26c18">Logic</span> While</h2>
+    </a>
+    <div class="subscribe-box">
+      <input type="email" placeholder="Enter email address">
+      <button>Subscribe</button>
+    </div>
+    <div class="footer-links">
+      <a href="#">Home</a> | <a href="#">Courses</a> | <a href="#">Events</a> | <a href="#">Contact</a>
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
 
-                <div class="menu-section">
-                    <h2>Utility</h2>
-                        <ul class="menu">
-                            <li><a href="#">Style Guide</a></li>
-                            <li><a href="#">Coming Soon</a></li>
-                            <li><a href="#">Instructions</a></li>
-                            <li><a href="#">Link in Bio</a></li>
-                            <li><a href="#">Licenses</a></li>
-                            <li><a href="#">Password Protected</a></li>
-                            <li><a href="#">Changelog</a></li>
-                            <li><a href="#">Error 404</a></li>
-                        </ul>
-                </div>
-       
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <h3>Contact us</h3>
-                        <p><i class="fa-solid fa-envelope"></i> hello@example.com</p>
-                        <p><i class="fa-solid fa-phone"></i> +123-456-7890</p>
-                    </div>
-
-                    <div class="social-links">
-                        <h3>Connect with us</h3>
-                        <div class="social-icons">
-                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>         
-    </footer>
+  <script src="./main.js"></script>
+  
 </body>
 </html>
