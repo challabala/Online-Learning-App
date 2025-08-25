@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    .main-cards {
+      max-width: 1300px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    .inner-div {
+      max-width: 1100px;
+      margin: 0 auto;
+      border: 2px solid #f26c18;
+      border-radius: 20px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .course-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .course-card:hover { transform: translateY(-5px); }
+    .course-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .time {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 15px;
+      font-size: 14px;
+      color: #333;
+      font-weight: 600;
+    }
+    .time i {
+      margin-right: 6px;
+      color: #f26c18;
+    }
+    .card-content {
+      padding: 10px 15px;
+    }
+    .card-content h3 {
+      margin: 0 0 5px;
+      font-size: 18px;
+    }
+    .card-content p {
+      font-size: 14px;
+      color: #555;
+    }
+    .price {
+      padding: 10px 15px;
+      font-weight: bold;
+      color: #2e7d32;
+      font-size: 16px;
+      border-top: 1px solid #eee;
+    }
+    .price i { margin-right: 5px; }
+
+    </style>
+</head>
+<body>
+    <section class="main-cards">
+    <div class="inner-div">
+      <div class="course-card">
+        <img src="https://media.geeksforgeeks.org/img-practice/prod/courses/504/Mobile/Other/Course_DSA_to_Dev_1720846081.webp" alt="Course Image">
+        <div class="time">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Beginner</h3>
+          <h3><i class="fa-regular fa-clock"></i> 55 hrs</h3>
+        </div>
+        <div class="card-content">
+          <h3>DSA</h3>
+          <p>DSA to development for a complete guide</p>
+        </div>
+        <div class="price">
+          <h3><i class="fa-solid fa-indian-rupee-sign"></i> 999</h3>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="course-card">
+        <img src="https://media.geeksforgeeks.org/img-practice/prod/courses/405/Mobile/Other/Course_ML_&_DS_1720846555.webp" alt="Course Image">
+        <div class="time">
+          <h3><i class="fa-solid fa-star-half-stroke"></i> Intermediate</h3>
+          <h3><i class="fa-regular fa-clock"></i> 40 hrs</h3>
+        </div>
+        <div class="card-content">
+          <h3>Machine Learning</h3>
+          <p>Complete Machine Learning abd the Data Science Program</p>
+        </div>
+        <div class="price">
+          <h3><i class="fa-solid fa-indian-rupee-sign"></i> 1499</h3>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="course-card">
+        <img src="https://media.geeksforgeeks.org/img-practice/prod/courses/227/Mobile/Other/Course_Backend_1720846992.webp" alt="Course Image">
+        <div class="time">
+          <h3><i class="fa-solid fa-award"></i> Advanced</h3>
+          <h3><i class="fa-regular fa-clock"></i> 30 hrs</h3>
+        </div>
+        <div class="card-content">
+          <h3>Backend Program</h3>
+          <p>Backend:node.js,express.js,Spring boot,MongoDB and SQL</p>
+        </div>
+        <div class="price">
+          <h3><i class="fa-solid fa-indian-rupee-sign"></i> 1999</h3>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="course-card">
+        <img src="https://media.geeksforgeeks.org/img-practice/prod/courses/500/Mobile/Other/MERN_1720848943.webp" alt="Course Image">
+        <div class="time">
+          <h3><i class="fa-solid fa-user-graduate"></i> Expert</h3>
+          <h3><i class="fa-regular fa-clock"></i> 25 hrs</h3>
+        </div>
+        <div class="card-content">
+          <h3>MERN Stack</h3>
+          <p>MERN fullstack javascript classroom program</p>
+        </div>
+        <div class="price">
+          <h3><i class="fa-solid fa-indian-rupee-sign"></i> 2499</h3>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="course-card">
+        <img src="https://media.geeksforgeeks.org/img-practice/prod/courses/715/Mobile/Other/data_analytics_1720850111.webp" alt="Course Image">
+        <div class="time">
+          <h3><i class="fa-solid fa-chalkboard"></i> Pro</h3>
+          <h3><i class="fa-regular fa-clock"></i> 60 hrs</h3>
+        </div>
+        <div class="card-content">
+          <h3>Data Analytics</h3>
+          <p>Data Analysis with Exel,SQL,Power Bi,Python,Tablue</p>
+        </div>
+        <div class="price">
+          <h3><i class="fa-solid fa-indian-rupee-sign"></i> 2999</h3>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="course-card">
+        <img src="https://media.geeksforgeeks.org/img-practice/prod/courses/483/Mobile/Other/Course_Devops_1720845934.webp" alt="Course Image">
+        <div class="time">
+          <h3><i class="fa-solid fa-rocket"></i> Master</h3>
+          <h3><i class="fa-regular fa-clock"></i> 70 hrs</h3>
+        </div>
+        <div class="card-content">
+          <h3>Dev Ops</h3>
+          <p>Dev Ops Engineer Planning to Production</p>
+        </div>
+        <div class="price">
+          <h3><i class="fa-solid fa-indian-rupee-sign"></i> 3999</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
