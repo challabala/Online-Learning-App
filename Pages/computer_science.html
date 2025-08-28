@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #fdfdfd, #f4f6ff);
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0a0a73;
+      font-size: 28px;
+    }
+
+    .course-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px;
+      border: 2px solid #f26c18;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border: 2px solid #0a0a73;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      border-color: #f26c18;
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .time {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 12px;
+      font-size: 14px;
+      color: #0a0a73;
+      font-weight: 600;
+      background: rgba(242, 108, 24, 0.1);
+    }
+
+    .time i {
+      color: #f26c18;
+      margin-right: 5px;
+    }
+
+    .card-content {
+      padding: 14px 18px;
+    }
+
+    .card-content h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0a0a73;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #444;
+      margin: 6px 0 0;
+      line-height: 1.4;
+    }
+
+    .price {
+      padding: 12px 16px;
+      font-weight: 700;
+      font-size: 16px;
+      color: #f26c18;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: flex-end;
+      background: #fafafa;
+    }
+
+    .price i {
+      margin-right: 4px;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none; /* ✅ Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 115, 0.9);
+      align-items: center;   /* Keep flex alignment but don't force flex display */
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #fff;
+      border-radius: 14px;
+      max-width: 900px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-content iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      color: #f26c18;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close-btn:hover {
+      color: #0a0a73;
+    }
+
+    @media (max-width: 768px) {
+      .modal-content iframe {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 22px;
+      }
+      .card-content h3 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Available Courses</h1>
+  <div class="course-container" id="courses"></div>
+
+  <!-- Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <iframe id="videoFrame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    const coursesData = {
+      "courses": [
+        {
+          "title": "C language",
+          "description": "Learn the fundamentals of C programming from syntax to pointers and functions.",
+          "thumbnail": "https://media.geeksforgeeks.org/img-practice/prod/courses/287/Web/Content/c_1722949071.webp",
+          "videoUrl": "https://www.youtube.com/embed/0Sg6QHmlFJE",
+          "level": "Beginner",
+          "duration": "10 hrs",
+          "price": 999,
+          "currency": "INR"
+        },
+        {
+          "title": "Python Programing",
+          "description": "Full-stack development using Python—from basics to web applications.",
+          "thumbnail": "https://media.geeksforgeeks.org/img-practice/prod/courses/256/Web/Content/py_1723007763.webp",
+          "videoUrl": "https://www.youtube.com/embed/_uQrJ0TkZlc",
+          "level": "Beginner",
+          "duration": "12 hrs",
+          "price": 1499,
+          "currency": "INR"
+        },
+        {
+          "title": "Java Programing",
+          "description": "Master Java programming concepts and hands-on projects using Java.",
+          "thumbnail": "https://media.geeksforgeeks.org/img-practice/prod/courses/270/Web/Content/CourseJavaProgrammin_1716371938.webp",
+          "videoUrl": "https://www.youtube.com/embed/ZFnRvpxpnOc?si=h5V0BhvMbNqWljN2",
+          "level": "Intermediate",
+          "duration": "13 hrs",
+          "price": 799,
+          "currency": "INR"
+        },
+        {
+          "title": "Compiler Design",
+          "description": "Deep dive into compiler theory: lexing, parsing, and code generation.",
+          "thumbnail": "https://media.geeksforgeeks.org/wp-content/uploads/20240625104119/Compiler-Design-Tutorial.webp",
+          "videoUrl": "https://www.youtube.com/embed/5ZmFlxrNaN8?si=V6WgqRC77LPA-JE0",
+          "level": "Advanced",
+          "duration": "15 hrs",
+          "price": 1999,
+          "currency": "INR"
+        },
+        {
+          "title": "DBMS",
+          "description": "Learn database management systems: SQL, normalization, indexing, and transactions.",
+          "thumbnail": "https://media.geeksforgeeks.org/courses/ViewsinDBMS/Artboard1copy20230929162655.png",
+          "videoUrl": "https://www.youtube.com/embed/c5HAwKX-suM?si=fClWjAh20ZkyYa_A",
+          "level": "Beginner",
+          "duration": "10 hrs",
+          "price": 899,
+          "currency": "INR"
+        },
+        {
+          "title": "Computer Networks",
+          "description": "Explore networking principles: protocols, layers, routing, and network architecture.",
+          "thumbnail": "https://media.geeksforgeeks.org/wp-content/uploads/20230406152358/CN-(1).jpg",
+          "videoUrl": "https://www.youtube.com/embed/IPvYjXCsTg8?si=NRimJLXa2cmr2tya",
+          "level": "Intermediate",
+          "duration": "15 hrs",
+          "price": 1299,
+          "currency": "INR"
+        },
+        {
+          "title": "Operating System",
+          "description": "Understand OS concepts: processes, memory management, scheduling, and concurrency.",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYPDvcZjBH5zwSuvibNweMD1HQKi0NFtA1lQ&s",
+          "videoUrl": "https://www.youtube.com/embed/WpdKyLXa9SU?si=Ije2FAzXyxi2OruG",
+          "level": "Beginner",
+          "duration": "8 hrs",
+          "price": 1599,
+          "currency": "INR"
+        },
+        {
+          "title": "Digital Electronics",
+          "description": "Learn digital logic, circuits, microprocessors, and electronics fundamentals.",
+          "thumbnail": "https://www.tutorialspoint.com/digital-electronics/images/digital-electronics-tutorial.jpg",
+          "videoUrl": "https://www.youtube.com/embed/pHNbm-4reIc?si=ra_5dyWKIhf8hzcl",
+          "level": "Advanced",
+          "duration": "8 hrs",
+          "price": 2499,
+          "currency": "INR"
+        }
+      ]
+    }
+
+    const coursesContainer = document.getElementById("courses");
+    const modal = document.getElementById("videoModal");
+    const videoFrame = document.getElementById("videoFrame");
+    const closeModal = document.getElementById("closeModal");
+
+    // Render Courses
+    coursesData.courses.forEach(course => {
+      const card = document.createElement("div");
+      card.classList.add("course-card");
+
+      card.innerHTML = `
+        <img src="${course.thumbnail}" alt="${course.title}">
+        <div class="time">
+          <h3><i class="fa-solid fa-graduation-cap"></i> ${course.level}</h3>
+          <h3><i class="fa-regular fa-clock"></i> ${course.duration}</h3>
+        </div>
+        <div class="card-content">
+          <h3>${course.title}</h3>
+          <p>${course.description}</p>
+        </div>
+        <div class="price">
+          <h3><i class="fa-solid fa-indian-rupee-sign"></i> ${course.price}</h3>
+        </div>
+      `;
+
+      // On card click -> open modal
+      card.addEventListener("click", () => {
+        videoFrame.src = course.videoUrl + "?autoplay=1";
+        modal.style.display = "flex";
+      });
+
+      coursesContainer.appendChild(card);
+    });
+
+    // Close modal
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+      videoFrame.src = ""; // Stop video
+    });
+
+    // Close modal when clicking outside video
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        videoFrame.src = "";
+      }
+    });
+  </script>
+</body>
+</html>
