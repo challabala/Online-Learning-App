@@ -19,6 +19,25 @@ body { font-family: 'Poppins', sans-serif; background: #f8f9fa; color: #2c2c6c; 
 .signup-btn { background: #f26c18; color: #fff; }
 .signup-btn:hover { background: #0a0a73; color: #f26c18; }
 .menu-icon { display: none; cursor: pointer; font-size: 22px; }
+.username {
+  font-weight: 600;
+  margin-right: 10px;
+  color: #333;
+}
+
+.logout-btn {
+  background: #f26c18;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #d85a12;
+}
+
 
   /* Banner */
 .banner { padding: 60px 20px; text-align: center; }
@@ -29,6 +48,7 @@ body { font-family: 'Poppins', sans-serif; background: #f8f9fa; color: #2c2c6c; 
 .btn2 { background: #0a0a73; }
 .banner-media { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
 .banner-media img, .banner-media video { width: 100%; max-width: 360px; border-radius: 12px; object-fit: cover; }
+
 
   /* Categories */
 .category { text-align: center; padding: 60px 20px; max-width: 1200px; margin: auto; }

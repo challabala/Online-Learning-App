@@ -29,3 +29,31 @@
         videoFrame.src = "";
       }
     }
+
+// sign in 
+// Run after DOM loads
+document.addEventListener("DOMContentLoaded", () => {
+  const authSection = document.getElementById("auth-section");
+
+  // Get user from localStorage
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (user && user.firstName) {
+    // If logged in, show name + logout
+    authSection.innerHTML = `
+      <span class="username">👋 ${user.firstName}</span>
+      <button id="logout-btn" class="logout-btn">Logout</button>
+    `;
+
+    // Logout function
+    document.getElementById("logout-btn").addEventListener("click", () => {
+      localStorage.removeItem("user"); // clear user
+      location.reload(); // refresh page to update navbar
+    });
+  } else {
+    // If not logged in, show Sign Up
+    authSection.innerHTML = `
+      <a href="./Pages/SignUp.html" class="signup-btn" id="auth-btn">Sign Up</a>
+    `;
+  }
+});
