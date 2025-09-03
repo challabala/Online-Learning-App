@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #fdfdfd, #f4f6ff);
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0a0a73;
+      font-size: 28px;
+    }
+
+    .course-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px;
+      border: 2px solid #f26c18;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border: 2px solid #0a0a73;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      border-color: #f26c18;
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .time {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 12px;
+      font-size: 14px;
+      color: #0a0a73;
+      font-weight: 600;
+      background: rgba(242, 108, 24, 0.1);
+    }
+
+    .time i {
+      color: #f26c18;
+      margin-right: 5px;
+    }
+
+    .card-content {
+      padding: 14px 18px;
+    }
+
+    .card-content h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0a0a73;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #444;
+      margin: 6px 0 0;
+      line-height: 1.4;
+    }
+
+    .price {
+      padding: 12px 16px;
+      font-weight: 700;
+      font-size: 16px;
+      color: #f26c18;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: flex-end;
+      background: #fafafa;
+    }
+
+    .price i {
+      margin-right: 4px;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none; /* ✅ Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 115, 0.9);
+      align-items: center;   /* Keep flex alignment but don't force flex display */
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #fff;
+      border-radius: 14px;
+      max-width: 900px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-content iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      color: #f26c18;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .close-btn:hover {
+      color: #0a0a73;
+    }
+
+    @media (max-width: 768px) {
+      .modal-content iframe {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 22px;
+      }
+      .card-content h3 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Available Courses</h1>
+  <div class="course-container" id="courses"></div>
+
+  <!-- Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <iframe id="videoFrame" src="" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    const coursesData = {
+      "courses": [
+        {
+          "title": "Python Programing",
+          "description": "Full-stack development using Python—from basics to web applications.",
+          "thumbnail": "https://media.geeksforgeeks.org/img-practice/prod/courses/256/Web/Content/py_1723007763.webp",
+          "videoUrl": "https://www.youtube.com/embed/_uQrJ0TkZlc",
+          "level": "Beginner",
+          "duration": "12 hrs",
+          "price": 1499,
+          "currency": "INR"
+        },
+        {
+          "title": "SQL",
+          "description": "Learn SQL concepts and build database applications.",
+          "thumbnail": "https://i.ytimg.com/vi/AA7i2GcTGwU/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCL7k6qVYcFpgp9XKaHLxfW4Az4OA",
+          "videoUrl": "https://www.youtube.com/embed/AA7i2GcTGwU?si=29JHk6cFqE1siSAb",
+          "level": "Advanced",
+          "duration": "10 hrs",
+          "price": 1999,
+          "currency": "INR"
+        },
+        {
+          "title": "R Programing",
+          "description": "Master R programming concepts and hands-on projects using R.",
+          "thumbnail": "https://i.ytimg.com/vi/KlsYCECWEWE/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDdxiNF2ARuMpqhIrIR_wV8gXDQ5Q",
+          "videoUrl": "https://www.youtube.com/embed/KlsYCECWEWE?si=3pnK_rcTa0nu3DjU",
+          "level": "Intermediate",
+          "duration": "13 hrs",
+          "price": 899,
+          "currency": "INR"
+        },
+        {
+          "title": "Pandas",
+          "description": "Learn data manipulation and analysis using Pandas.",
+          "thumbnail": "https://i.ytimg.com/vi/rhTgpY76XWc/maxresdefault.jpg",
+          "videoUrl": "https://www.youtube.com/embed/2uvysYbKdjM?si=3d7MJ3c9lM-TNdyt",
+          "level": "Advanced",
+          "duration": "2 hrs",
+          "price": 799,
+          "currency": "INR"
+        },
+        {
+          "title": "Numpy",
+          "description": "Learn data manipulation and analysis using Numpy.",
+          "thumbnail": "https://i.ytimg.com/vi/CetoL2usa-s/maxresdefault.jpg",
+          "videoUrl": "https://www.youtube.com/embed/CetoL2usa-s?si=4HyWr19UNjp61FLs",
+          "level": "Beginner",
+          "duration": "6 hrs",
+          "price": 899,
+          "currency": "INR"
+        },
+        {
+          "title": "Excel",
+          "description": "Learn Excel from basics to advanced concepts.",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOz19u3o1YmRln1-_f-VTo9Vl4CdntkSfsjA&s",
+          "videoUrl": "https://www.youtube.com/embed/TpOIGij43AA?si=2sXxDMPuT2E6hWDH",
+          "level": "Intermediate",
+          "duration": "6 hrs",
+          "price": 499,
+          "currency": "INR"
+        },
+        {
+          "title": "Power BI",
+          "description": "Understand Power BI concepts and build interactive dashboards.",
+          "thumbnail": "https://i.ytimg.com/vi/e6QD8lP-m6E/maxresdefault.jpg",
+          "videoUrl": "https://www.youtube.com/embed/_76bzIuz-dU?si=3dXNSZx-tBZjuEfm",
+          "level": "Advanced",
+          "duration": "14 hrs",
+          "price": 999,
+          "currency": "INR"
+        },
+        {
+          "title": "Pytorch",
+          "description": "Learn Pytorch for deep learning and AI applications.",
+          "thumbnail": "https://i.ytimg.com/vi/V_xro1bcAuA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBpxWs9nxI5Gje_Ex60_rs5F60M2A",
+          "videoUrl": "https://www.youtube.com/embed/V_xro1bcAuA?si=6GY7cTjAEhtVWPSm",
+          "level": "Advanced",
+          "duration": "10 hrs",
+          "price": 1999,
+          "currency": "INR"
+        }
+      ]
+    }
+
+    const coursesContainer = document.getElementById("courses");
+    const modal = document.getElementById("videoModal");
+    const videoFrame = document.getElementById("videoFrame");
+    const closeModal = document.getElementById("closeModal");
+
+    // Render Courses
+    coursesData.courses.forEach(course => {
+      const card = document.createElement("div");
+      card.classList.add("course-card");
+
+      card.innerHTML = `
+        <img src="${course.thumbnail}" alt="${course.title}">
+        <div class="time">
+          <h3><i class="fa-solid fa-graduation-cap"></i> ${course.level}</h3>
+          <h3><i class="fa-regular fa-clock"></i> ${course.duration}</h3>
+        </div>
+        <div class="card-content">
+          <h3>${course.title}</h3>
+          <p>${course.description}</p>
+        </div>
+        <div class="price">
+          <h3><i class="fa-solid fa-indian-rupee-sign"></i> ${course.price}</h3>
+        </div>
+      `;
+
+      // On card click -> open modal
+      card.addEventListener("click", () => {
+        videoFrame.src = course.videoUrl + "?autoplay=1";
+        modal.style.display = "flex";
+      });
+
+      coursesContainer.appendChild(card);
+    });
+
+    // Close modal
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+      videoFrame.src = ""; // Stop video
+    });
+
+    // Close modal when clicking outside video
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        videoFrame.src = "";
+      }
+    });
+  </script>
+</body>
+</html>
