@@ -24,7 +24,48 @@ body { font-family: 'Poppins', sans-serif; background: #f8f9fa; color: #2c2c6c; 
   margin-right: 10px;
   color: #333;
 }
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
 
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 1000;
+  list-style: none;
+  padding: 8px 0;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: #f26c18;
+  color: #fff;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
 .logout-btn {
   background: #f26c18;
   color: #fff;
