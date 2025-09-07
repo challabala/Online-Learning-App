@@ -20,10 +20,19 @@
     <div class="menu-icon" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
     <ul class="nav-menu" id="nav-menu">
       <li><a href="#" class="nav-link">Home</a></li>
-      <li><a href="#" class="nav-link">Courses</a></li>
+      <li><a href="./Pages/ExploreAll.html" class="nav-link">Courses</a></li>
       <li><a href="#" class="nav-link">Premium</a></li>
-      <li><a href="#" class="nav-link">Pages</a></li>
+      <li class="dropdown">
+        <a href="#" class="nav-link">Pages <i class="fa-solid fa-caret-down"></i></a>
+        <ul class="dropdown-menu">
+          <li><a href="./Pages/Banner.html">About Us</a></li>
+          <li><a href="./Pages/footer.html">Contact</a></li>
+          <li><a href="./Pages/Cards.html">Domo Course</a></li>
+          <li><a href="./Pages/ExploreAll.html">All Courses</a></li>
+        </ul>
+      </li>
       <li><a href="#" class="cart">Cart</a></li>
+      
       <!-- Place where we will show Sign Up / Username + Logout -->
       <li id="auth-section">
         <a href="./Pages/SignUp.html" class="signup-btn" id="auth-btn">Sign Up</a>
@@ -41,8 +50,13 @@
     </div>
     <p class="banner-para">Where students are encouraged to reach their full potential through rigorous coursework, innovative research, and a supportive learning environment.</p>
     <div class="banner-btn">
-      <button class="btn">Start learn today</button>
-      <button class="btn btn2">Explore Program</button>
+      <a href="./Pages/SignUp.html">
+  <button class="btn">Start learn today</button>
+</a>
+
+<a href="./Pages/ExploreAll.html">
+  <button class="btn btn2">Explore Program</button>
+</a>
     </div>
     <div class="banner-media">
       <img src="https://cdn.prod.website-files.com/66d2b0d6f9dd1bce468522a2/66d584e27f342ce4458046aa_about-image-01.avif" alt="">
@@ -53,7 +67,6 @@
     </div>
   </section>
 
-  <!-- Categories -->
   <!-- Categories -->
   <section class="category">
   <h2>Explore diverse learning paths within <br> our course <span>categories</span></h2>
@@ -81,7 +94,7 @@
     <a href="./Pages/Database_mangement.html" class="category-card">
       <i class='bx bx-server'></i><span>Database management</span>
     </a>
-    <a href="#" class="category-card highlight">
+    <a href="./Pages/ExploreAll.html" class="category-card highlight">
       <span>Explore all categories</span>
     </a>
   </div>
