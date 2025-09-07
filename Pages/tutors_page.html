@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Tutors</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      color: #222;
+    }
+
+    .container {
+    background-color: #fdf9f2;
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 20px;
+      text-align: center;
+      height: 100vh;
+     
+   
+    }
+
+    .container h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      position: relative;
+      right: 250px;
+      color: #2f2f68;
+    }
+
+    .container h4 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      position: relative;
+      right: 380px;
+      color: #2f2f68;
+    }
+
+    .container h2 .highlight {
+      color: #f55f5f;
+    }
+
+    .tutors {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .tutor-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      width: 200px;
+      transition: transform 0.3s ease;
+    }
+
+    .tutor-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .tutor-card img {
+      width: 100%;
+      height: 200px;
+      border-radius: 12px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .tutor-card img:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .tutor-card h3 {
+      font-size: 1.1rem;
+      color: #2a2a72;
+      margin-bottom: 5px;
+    }
+
+    .tutor-card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .cta-section {
+      max-width: 1200px;
+      margin: 50px auto ;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cta-text {
+      font-size: 1.2rem;
+      color: #222;
+      line-height: 1.5;
+      text-align: left;
+      max-width: 600px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .cta-buttons button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-yellow {
+      background-color: #fdd835;
+      border: 1px solid yellow;
+      color: #222;
+    }
+
+    .btn-yellow:hover {
+      background-color: white;
+    }
+
+    .btn-outline {
+      border: 1px solid #2a2a72;
+      background: transparent;
+      color: #2a2a72;
+    }
+
+    .btn-outline:hover {
+      background: aliceblue;
+      color: black;
+    }
+
+    @media (max-width: 768px) {
+      .container h2 {
+        font-size: 2.5rem;
+        right: 0;
+      }
+
+      .container h4 {
+        font-size: 2.5rem;
+        right: 0;
+      }
+
+      .tutor-card {
+        width: 45%;
+      }
+
+      .cta-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .cta-text {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .cta-buttons {
+        justify-content: center;
+      } 
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <h2>Meet the <span class="highlight">tutors</span> behind your </h2>
+    <h4>learning journey</h4>
+
+    <div class="tutors">
+      <div class="tutor-card">
+        <img src="https://cdn.prod.website-files.com/66d5a01f357c3675d5ff5d12/66d7fe0722d8e4d5a1238ac1_tutor-01.avif" alt="Dennis Barrett">
+        <h3>Dennis Barrett</h3>
+        <p>Professor</p>
+      </div>
+      <div class="tutor-card">
+        <img src="https://cdn.prod.website-files.com/66d5a01f357c3675d5ff5d12/66d83cd13ed29feb19e86f37_tutor-02.avif" alt="Lori Stevens">
+        <h3>Lori Stevens</h3>
+        <p>Lecturer</p>
+      </div>
+      <div class="tutor-card">
+        <img src="https://cdn.prod.website-files.com/66d5a01f357c3675d5ff5d12/66d83ce4bd91e633a3c67e69_tutor-03.avif" alt="Billy Vasquez">
+        <h3>Billy Vasquez</h3>
+        <p>Instructor</p>
+      </div>
+      <div class="tutor-card">
+        <img src="https://cdn.prod.website-files.com/66d5a01f357c3675d5ff5d12/66d83cee9470005db348852d_tutor-04.avif" alt="Joan Wallace">
+        <h3>Joan Wallace</h3>
+        <p>Assistant Professor</p>
+      </div>
+      <div class="tutor-card">
+        <img src="https://cdn.prod.website-files.com/66d5a01f357c3675d5ff5d12/66d83cf98ede96a52a2928c6_tutor-05.avif" alt="Jacqueline Miller">
+        <h3>Jacqueline Miller</h3>
+        <p>Lecturer</p>
+      </div>
+    </div>
+    
+    
+    <section class="cta-section">
+        <hr style="width:100%; border:1px solid #ccc; margin-bottom:20px;">
+        <p class="cta-text">
+            Join our learning community and gain access to a team of dedicated instructors 
+            who are committed to helping you succeed.
+        </p>
+
+        <div class="cta-buttons">
+            <button class="btn-yellow">Meet our all tutors</button>
+            <button class="btn-outline">View all courses</button>
+        </div>
+    </section>
+</section>
+</body>
+</html>
