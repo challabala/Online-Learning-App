@@ -11,162 +11,138 @@
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
     }
+    /* Student Section */
+.student {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1300px;
+  width: 100%;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+}
 
-    body {
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 40px;
-    }
+/* Left stats box */
+.stats-box {
+  background: #f3f7ff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  width: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
 
-    .section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      max-width: 1300px;
-      width: 100%;
-      margin-bottom: 40px;
-    }
+.stats-box .icon {
+  background: #2962ff;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
 
-    /* Left stats box */
-    .stats-box {
-      background: #f3f7ff;
-      border-radius: 15px;
-      padding: 30px 20px;
-      text-align: center;
-      width: 150px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      position: relative;
-      bottom: 160px;
-    }
+.stats-box p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 10px;
+}
 
-    .stats-box .icon {
-      background: #2962ff;
-      color: #fff;
-      font-size: 1.5rem;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 15px;
-    }
+.stats-box h3 {
+  font-size: 1.8rem;
+  color: #ff6b6b;
+}
 
-    .stats-box p {
-      font-size: 0.95rem;
-      color: #333;
-      margin-bottom: 10px;
-    }
+/* Main image */
+.main-img {
+  flex: 1;
+  border-radius: 20px;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
 
-    .stats-box h3 {
-      font-size: 1.8rem;
-      color: #ff6b6b;
-    }
+/* Small right image */
+.side-img {
+  width: 220px;
+  border-radius: 15px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 
-    /* Main image */
-    .main-img {
-      flex: 1;
-      border-radius: 20px;
-      width: 100%;
-      max-height: 500px;
-      object-fit: cover;
-    }
+/* Hero section */
+.hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
 
-    /* Small right image */
-    .side-img {
-      width: 220px;
-      border-radius: 15px;
-      object-fit: cover;
-      position: relative;
-      top: 190px;
-    }
-    
-    /* Hero section */
-    .hero {
-      text-align: center;
-      max-width: 800px;
-    }
+.hero h1 {
+  font-size: 3.0rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #2a2a72;
+}
+.highlight-2 {
+  color: #ff6b6b;
+  /* background-color: transparent; */
+}
 
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 20px;
-      color: #2a2a72;
-    }
+/* Buttons */
+.section-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-    .hero h1 .highlight {
-      color: #ff6b6b;
-    }
+.btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
 
-    /* Buttons */
-    .section-buttons {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+.btn-yellow {
+  background-color: #fdd835;
+  color: #000;
+  font-weight: 600;
+  border: 1px solid #fdd835;
+}
 
-    .btn {
-      padding: 12px 25px;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      border: none;
-      transition: all 0.3s ease;
-    }
+.btn-yellow:hover {
+  background-color: white;
+  border-color: #fdd835;
+}
 
-    .btn-yellow {
-      background-color: #fdd835;
-      color: #000;
-      font-weight: 600;
-      border: 1px solid yellow;
-    }
+.btn-link {
+  background: transparent;
+  color: #2a2a72;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  border: none;
+}
 
-    .btn-yellow:hover {
-      background-color: white;
-      
-    }
+.btn-link:hover {
+  color: #000;
+}
 
-    .btn-link {
-      background: transparent;
-      color: #2a2a72;
-      font-weight: 600;
-      text-decoration: underline;
-      cursor: pointer;
-      border: none;
-    }
-    .btn-link:hover {
-      color: #000;
-    }
-
-    /* Responsive */
-    @media (max-width: 992px) {
-      .section {
-        flex-direction: column;
-        text-align: center;
-      }
-      .stats-box {
-        width: 100%;
-        max-width: 200px;
-        bottom: 0;
-        height: 100%;
-      }
-      .side-img {
-        width: 100%;
-        max-width: 300px;
-        top: 0;
-      }
-    }
-  </style>
+    </style>
 </head>
 <body>
-  <section class="section">
+      <!-- student -->
+  <section class="student">
     <!-- Stats Box -->
     <div class="stats-box">
       <div class="icon">🎓</div>
@@ -175,16 +151,16 @@
     </div>
 
     <!-- Main Image -->
-    <img src="https://cdn.prod.website-files.com/66d2b0d6f9dd1bce468522a2/66d585a69400e7c15c0b0753_about-image-02.avif" alt="Main" class="main-img">
+    <img src="https://cdn.prod.website-files.com/66d2b0d6f9dd1bce468522a2/66d585a69400e7c15c0b0753_about-image-02.avif" alt="Student Learning" class="main-img">
 
     <!-- Side Image -->
-    <img src="https://cdn.prod.website-files.com/66d2b0d6f9dd1bce468522a2/66d585eb7c6c967e491cca82_about-image-03.avif" alt="Books" class="side-img">
+    <img src="https://cdn.prod.website-files.com/66d2b0d6f9dd1bce468522a2/66d585eb7c6c967e491cca82_about-image-03.avif" alt="Study Materials" class="side-img">
   </section>
 
   <!-- Hero Section -->
   <div class="hero">
     <h1>
-      Ready to achieve <span class="highlight">greatness</span><br>
+      Ready to achieve <span class="highlight-2">greatness</span><br>
       in your studies?
     </h1>
 

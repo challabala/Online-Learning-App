@@ -5,26 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meet the Tutors</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    body {
-      color: #222;
-    }
-
+          /* Tutor Section */
     .container {
-    background-color: #fdf9f2;
+      background-color: #fdf9f2;
       max-width: 1200px;
       margin: auto;
       padding: 50px 20px;
       text-align: center;
-      height: 100vh;
-     
-   
     }
 
     .container h2 {
@@ -32,21 +19,18 @@
       font-weight: 700;
       line-height: 1.3;
       margin-bottom: 10px;
-      position: relative;
-      right: 250px;
       color: #2f2f68;
     }
 
     .container h4 {
       font-size: 3rem;
       margin-bottom: 40px;
-      position: relative;
-      right: 380px;
       color: #2f2f68;
     }
 
-    .container h2 .highlight {
+    .container h2 .highlight-1 {
       color: #f55f5f;
+      background-color: transparent;
     }
 
     .tutors {
@@ -69,6 +53,7 @@
 
     .tutor-card:hover {
       transform: translateY(-8px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
     }
 
     .tutor-card img {
@@ -77,13 +62,13 @@
       border-radius: 12px;
       object-fit: cover;
       margin-bottom: 15px;
+      transition: transform 0.3s ease;
     }
 
     .tutor-card img:hover {
       transform: scale(1.05);
-      transition: transform 0.3s ease;
     }
-    
+
     .tutor-card h3 {
       font-size: 1.1rem;
       color: #2a2a72;
@@ -97,7 +82,7 @@
 
     .cta-section {
       max-width: 1200px;
-      margin: 50px auto ;
+      margin: 50px auto;
       padding: 20px;
       display: flex;
       justify-content: space-between;
@@ -125,17 +110,19 @@
       font-size: 1rem;
       border-radius: 30px;
       cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition: all 0.3s ease;
+      /* border: none; */
     }
 
     .btn-yellow {
       background-color: #fdd835;
-      border: 1px solid yellow;
+      border: 1px solid #fdd835;
       color: #222;
     }
 
     .btn-yellow:hover {
-      background-color: white;
+      background-color: #fff;
+      border-color: #fdd835;
     }
 
     .btn-outline {
@@ -145,44 +132,16 @@
     }
 
     .btn-outline:hover {
-      background: aliceblue;
-      color: black;
+      background: #2a2a72;
+      color: white;
     }
 
-    @media (max-width: 768px) {
-      .container h2 {
-        font-size: 2.5rem;
-        right: 0;
-      }
-
-      .container h4 {
-        font-size: 2.5rem;
-        right: 0;
-      }
-
-      .tutor-card {
-        width: 45%;
-      }
-
-      .cta-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .cta-text {
-        max-width: 100%;
-        text-align: center;
-      }
-
-      .cta-buttons {
-        justify-content: center;
-      } 
-    }
   </style>
 </head>
 <body>
+    <!-- tutor -->
   <section class="container">
-    <h2>Meet the <span class="highlight">tutors</span> behind your </h2>
+    <h2>Meet the <span class="highlight-1">tutors</span> behind your </h2>
     <h4>learning journey</h4>
 
     <div class="tutors">
@@ -213,19 +172,18 @@
       </div>
     </div>
     
-    
     <section class="cta-section">
-        <hr style="width:100%; border:1px solid #ccc; margin-bottom:20px;">
-        <p class="cta-text">
-            Join our learning community and gain access to a team of dedicated instructors 
-            who are committed to helping you succeed.
-        </p>
+      <hr style="width:100%; border:1px solid #ccc; margin-bottom:20px;">
+      <p class="cta-text">
+        Join our learning community and gain access to a team of dedicated instructors 
+        who are committed to helping you succeed.
+      </p>
 
-        <div class="cta-buttons">
-            <button class="btn-yellow">Meet our all tutors</button>
-            <button class="btn-outline">View all courses</button>
-        </div>
+      <div class="cta-buttons">
+        <button class="btn-yellow">Meet our all tutors</button>
+        <button class="btn-outline">View all courses</button>
+      </div>
     </section>
-</section>
+  </section>
 </body>
 </html>
